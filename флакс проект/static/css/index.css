@@ -1,0 +1,16 @@
+h1 {
+    color: #2c3e50;           
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    font-size: 3rem;          
+    margin-bottom: 10px;      
+    text-align: center;
+}       
+
+p {
+    color: #333;              
+    font-family: Arial, sans-serif;
+    font-size: 1.2rem;        
+    line-height: 1.6;        
+    max-width: 600px;          
+    margin: 0 auto;
+}          
