@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Академия Пайтона "Священный Грааль"</title>
+     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+</head>
+<body>
+
+    <section class="academy-block">
+        <h3>Академия Пайтона "Священный Грааль"</h3>
+        
+        <p>Мы здесь не просто пишем код. <strong> Это</strong> вам не <em>это</em>.</p>
+        
+        <blockquote>
+            <p>«Всюду успевает тот, кто никуда не торопится.»</p>
+            <cite>— Михаил Афанасьевич <em>Булгаков</em></cite>
+        </blockquote>
+        
+        <img src="https://www.svgrepo.com/show/379165/functions.svg" 
+         alt="Код на экране">
+
+        <p>Старт: <time datetime="2024-10-25T18:00">18:00, 25 октября</time></p>
+        
+        <details>
+            <summary>Жми, ёкарный бабай, <strong>ЖМИ!</strong></summary>
+            <p>Рояль в кустах.</p>
+        </details>
+        
+        <label for="comment">Комментарий:</label><br>
+        <textarea id="comment" rows="3" cols="30"></textarea>
+        
+        <br>
+        <label for="launch-progress">Готовность проекта:</label><br>
+        <progress id="launch-progress" value="{{ percent }}" max="100"></progress>
+        <small>Текущее значение: {{ percent }}%</small>
+    </section>
+
+</body>
+</html>

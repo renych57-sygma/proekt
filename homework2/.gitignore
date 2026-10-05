@@ -1,0 +1,37 @@
+venv/
+env/
+.venv/
+
+# Кэш и байт-код Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Файлы IDE (VS Code, PyCharm и т.д.)
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Локальные конфиги и логи
+.DS_Store
+Thumbs.db
+*.log
