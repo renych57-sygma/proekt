@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+
+{% block content %}
+<section class="notes-page">
+    <h2>Дневник программиста</h2>
+
+    <form action="{{ url_for('notes') }}" method="post" class="note-form">
+        <label for="title">Заголовок записи:</label>
+        <input type="text" id="title" name="title" placeholder="Например: первая ачивка" required>
+
+        <label for="content">Текст записи:</label>
+        <textarea id="content" name="content" rows="5" placeholder="Что сегодня получилось?" required></textarea>
+
+        <button type="submit" class="btn-primary">Добавить запись</button>
+    </form>
+
+    {% if notes %}
+        <div class="notes-list">
+            <h3>Мои записи</h3>
+            {% for title, content in notes.items() %}
+                <article class="note-item">
+                    <h4>{{ title }}</h4>
+                    <p>{{ content }}</p>
+                </article>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>Пока нет записей. Пиши если что.</p>
+    {% endif %}
+</section>
+{% endblock %}
