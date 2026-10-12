@@ -1,10 +1,13 @@
+
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Академия Пайтона "Священный Грааль"</title>
+    
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Merriweather:ital@1&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
 </head>
 <body>
@@ -12,17 +15,21 @@
         <h1>Академия Пайтона</h1>
         <nav>
             <a href="{{ url_for('index') }}">Главная</a>
-            <a href="{{ url_for('notes') }}">Дневник программиста</a>
+            <a href="{{ url_for('diary') }}">Дневник программиста</a>
         </nav>
     </header>
 
     <main class="container">
         {% block content %}
+            <article>
+                <h2>Добро пожаловать в Академию Пайтона!</h2>
+                <p> Священный Грааль кода ближе, чем кажется.</p>
+            </article>
         {% endblock %}
     </main>
 
     <footer>
-        <p>&copy; 2024 Академия Пайтона.</p>
+        <p>&copy; 2024 Академия Пайтона. Ищем Священный Грааль в коде.</p>
     </footer>
 </body>
 </html>

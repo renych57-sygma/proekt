@@ -4,7 +4,8 @@
 <section class="notes-page">
     <h2>Дневник программиста</h2>
 
-    <form action="{{ url_for('notes') }}" method="post" class="note-form">
+    <form action="{{ url_for('diary') }}" method="post" class="note-form">
+
         <label for="title">Заголовок записи:</label>
         <input type="text" id="title" name="title" placeholder="Например: первая ачивка" required>
 
@@ -14,18 +15,22 @@
         <button type="submit" class="btn-primary">Добавить запись</button>
     </form>
 
-    {% if notes %}
-        <div class="notes-list">
-            <h3>Мои записи</h3>
-            {% for title, content in notes.items() %}
+    <hr style="border: 0; border-top: 1px solid #ddd; margin: 30px 0;">
+
+
+    <div class="notes-list">
+        <h3>Мои записи</h3>
+        
+        {% if notes %}
+            {% for note in notes %}
                 <article class="note-item">
-                    <h4>{{ title }}</h4>
-                    <p>{{ content }}</p>
+                    <h4>{{ note.title }}</h4>
+                    <p>{{ note.text }}</p>
                 </article>
             {% endfor %}
-        </div>
-    {% else %}
-        <p>Пока нет записей. Пиши если что.</p>
-    {% endif %}
+        {% else %}
+            <p>Пока нет записей. Пиши, если что.</p>
+        {% endif %}
+    </div>
 </section>
 {% endblock %}
