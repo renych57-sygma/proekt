@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+
+{% block title %}Главная — Дневник{% endblock %}
+
+{% block content %}
+    <h1>Добро пожаловать в Дневник</h1>
+    
+    <div style="margin-top: 20px;">
+        <a href="{{ url_for('register') }}">
+            <button style="padding: 10px 20px; font-size: 16px;">Регистрация</button>
+        </a>
+        
+        <a href="{{ url_for('login') }}">
+            <button style="padding: 10px 20px; font-size: 16px; margin-left: 10px;">Вход</button>
+        </a>
+    </div>
+{% endblock %}
