@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Создать карточку{% endblock %}
+{% block content %}
+<h2 class="mb-4">Создать карточку</h2>
+<form action="{{ url_for('form_create') }}" method="POST">
+    <div class="mb-3">
+        <label class="form-label">Заголовок</label>
+        <input type="text" name="title" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Подзаголовок</label>
+        <input type="text" name="subtitle" class="form-control" required>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Текст карточки</label>
+        <textarea name="text" class="form-control" rows="5" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Создать</button>
+    <a href="{{ url_for('index') }}" class="btn btn-secondary ms-2">Отмена</a>
+</form>
+{% endblock %}
